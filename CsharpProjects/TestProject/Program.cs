@@ -1,4 +1,67 @@
-﻿// Random dice = new Random();
+﻿string studentName = "Sophia Johnson";
+string course1Name = "English 101";
+string course2Name = "Algebra 101";
+string course3Name = "Biology 101";
+string course4Name = "Computer Science I";
+string course5Name = "Psychology 101";
+
+int course1Credit = 3;
+int course2Credit = 3;
+int course3Credit = 4;
+int course4Credit = 4;
+int course5Credit = 3;
+
+int gradeA = 4;
+int gradeB = 3;
+
+int course1Grade = gradeA;
+int course2Grade = gradeB;
+int course3Grade = gradeB;
+int course4Grade = gradeB;
+int course5Grade = gradeA;
+
+int totalCreditHours = 0;
+totalCreditHours += course1Credit;
+totalCreditHours += course2Credit;
+totalCreditHours += course3Credit;
+totalCreditHours += course4Credit;
+totalCreditHours += course5Credit;
+
+int totalGradePoints = 0;
+totalGradePoints += course1Credit * course1Grade;
+totalGradePoints += course2Credit * course2Grade;
+totalGradePoints += course3Credit * course3Grade;
+totalGradePoints += course4Credit * course4Grade;
+totalGradePoints += course5Credit * course5Grade;
+
+decimal gradePointAverage = (decimal) totalGradePoints/totalCreditHours;
+
+int leadingDigit = (int) gradePointAverage;
+int trailingDigits = (int) (gradePointAverage * 100) - (leadingDigit * 100);
+
+// Console.WriteLine($"{studentName}");
+// Console.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
+// Console.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
+// Console.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
+// Console.WriteLine($"{course4Name} {course4Grade} {course4Credit}");
+// Console.WriteLine($"{course5Name} {course5Grade} {course5Credit}");
+
+// Console.WriteLine($"Final GPA: {leadingDigit}.{trailingDigits}");
+
+// Format the output using escape character sequences
+Console.WriteLine($"Student: {studentName}\n");
+Console.WriteLine("Course\t\t\t\tGrade\tCredit Hours");
+
+Console.WriteLine($"{course1Name}\t\t\t{course1Grade}\t\t{course1Credit}");
+Console.WriteLine($"{course2Name}\t\t\t{course2Grade}\t\t{course2Credit}");
+Console.WriteLine($"{course3Name}\t\t\t{course3Grade}\t\t{course3Credit}");
+Console.WriteLine($"{course4Name}\t{course4Grade}\t\t{course4Credit}");
+Console.WriteLine($"{course5Name}\t\t{course5Grade}\t\t{course5Credit}");
+
+Console.WriteLine($"\nFinal GPA:\t\t\t{leadingDigit}.{trailingDigits}");
+
+
+// Random dice = new Random();
 // int roll = dice.Next(0, 2);
 
 // Console.WriteLine((roll == 0) ? "heads" : "tails");
@@ -201,24 +264,24 @@ else ipAddress is invalid
 // }
 
 // *! Your challenge is to create a reusable method that prints a player's fortune at any time. The method should contain the logic that is already present in the code provided.
-Random random = new Random();
-int luck = random.Next(100);
+// Random random = new Random();
+// int luck = random.Next(100);
 
-string[] text = {"You have much to", "Today is a day to", "Whatever work you do", "This is an ideal time to"};
-string[] good = {"look forward to.", "try new things!", "is likely to succeed.", "accomplish your dreams!"};
-string[] bad = {"fear.", "avoid major decisions.", "may have unexpected outcomes.", "re-evaluate your life."};
-string[] neutral = {"appreciate.", "enjoy time with friends.", "should align with your values.", "get in tune with nature."};
+// string[] text = {"You have much to", "Today is a day to", "Whatever work you do", "This is an ideal time to"};
+// string[] good = {"look forward to.", "try new things!", "is likely to succeed.", "accomplish your dreams!"};
+// string[] bad = {"fear.", "avoid major decisions.", "may have unexpected outcomes.", "re-evaluate your life."};
+// string[] neutral = {"appreciate.", "enjoy time with friends.", "should align with your values.", "get in tune with nature."};
 
-TellFortune();
-luck = random.Next(100);
-TellFortune();
+// TellFortune();
+// luck = random.Next(100);
+// TellFortune();
 
-void TellFortune() 
-{
-    Console.WriteLine("A fortune teller whispers the following words:");
-    string[] fortune = (luck > 75 ? good : (luck < 25 ? bad : neutral));
-    for (int i = 0; i < 4; i++) 
-    {
-        Console.Write($"{text[i]} {fortune[i]} ");
-    }
-}
+// void TellFortune() 
+// {
+//     Console.WriteLine("A fortune teller whispers the following words:");
+//     string[] fortune = (luck > 75 ? good : (luck < 25 ? bad : neutral));
+//     for (int i = 0; i < 4; i++) 
+//     {
+//         Console.Write($"{text[i]} {fortune[i]} ");
+//     }
+// }
